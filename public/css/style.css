@@ -3,3 +3,8 @@ header nav ul{
     list-style-type:none;
     justify-content: space-around;
 }
+
+.example-wrapper{
+    width: 74%;
+    margin: auto;
+}

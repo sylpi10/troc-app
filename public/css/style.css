@@ -9,31 +9,28 @@ header nav ul{
     margin: auto;
 }
 
-.add-shop, .user-objects{
+.user-entity-wrapper{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
     padding: 30px;
     border: solid 1px #ccc;
 }
 
-.user-objects{
-    display: flex;
-    margin-top: 50px;
-    justify-content: space-between;
-}
-
-.add-objects{
+.form{
     width: 34%;
 }
- .objects-wrapper{
+ .entity-wrapper{
     width: 60%;
 }
 
 .user-objects .price{
     color: #f44;
 }
-.user-objects .objects{
+.user-entity-wrapper .entities{
     display: flex;
 }
-.user-objects .object-card{
+.user-entity-wrapper .entity-card{
     box-shadow: 3px 3px 3px #ccc, -3px -3px 3px #ccc;
     padding: 14px;
     width: 40%;

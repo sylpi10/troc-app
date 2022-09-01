@@ -10,14 +10,14 @@
 			{{app.user}}</h1>
 
 		<div class="account-action">
-			<div class="add-shop">
+			<div class="add-shop form ">
 
 				{% if showShopForm %}
 					<h3>Create my shop</h3>
 
 					{{ form_start(shopForm) }}
 					{{ form_widget(shopForm) }}
-					<button type="submit" class="btn">Add Shop</button>
+					<button type="submit" class="btn btn-success">Add Shop</button>
 					{{ form_end(shopForm) }}
 				{% else %}
 					<h3>My Shop :
@@ -26,8 +26,8 @@
 			</div>
 
 
-			<div class="user-objects">
-				<div class="add-objects">
+			<div class="user-objects user-entity-wrapper">
+				<div class="add-objects form">
 					<h3>Add an object to my shop</h3>
 					{{ form_start(objectForm) }}
 					{{ form_widget(objectForm) }}
@@ -35,12 +35,12 @@
 					{{ form_end(objectForm) }}
 				</div>
 
-				<div class="objects-wrapper">
+				<div class="objects-wrapper entity-wrapper">
 					<h3>Objects in my shop:
 					</h3>
-					<div class="objects">
+					<div class="entities">
 						{% for object in shop.objects %}
-							<div class="object-card">
+							<div class="entity-card">
 								<h3>{{object.name}}</h3>
 								<h4 class="price">{{object.price}}
 									$</h4>
@@ -51,6 +51,31 @@
 
 				</div>
 			</div>
+
+			<div class="user-relay user-entity-wrapper">
+
+				<div class="user-relay form">
+					<h3>Add Relay Point</h3>
+					{{ form_start(relayForm) }}
+					{{ form_widget(relayForm) }}
+					<button type="submit" class="btn btn-success">Add Relay point</button>
+					{{ form_end(relayForm) }}
+				</div>
+				<div class="entity-wrapper">
+					<h3>My relay points</h3>
+					<div class="object-card">
+						<div class="entities">
+							{% for relay in relay %}
+								<div class="entity-card">
+									<h3>{{relay.name}}</h3>
+
+									<p>{{relay.address}}</p>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+
+			</div>
 		</div>
-	</div>
-{% endblock %}
+	{% endblock %}

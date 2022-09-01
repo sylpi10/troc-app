@@ -8,3 +8,42 @@ header nav ul{
     width: 74%;
     margin: auto;
 }
+
+.add-shop, .user-objects{
+    padding: 30px;
+    border: solid 1px #ccc;
+}
+
+.user-objects{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.add-objects{
+    width: 34%;
+}
+ .objects-wrapper{
+    width: 60%;
+}
+
+.user-objects .price{
+    color: #f44;
+}
+.user-objects .objects{
+    display: flex;
+}
+.user-objects .object-card{
+    box-shadow: 3px 3px 3px #ccc, -3px -3px 3px #ccc;
+    padding: 14px;
+    width: 40%;
+    margin: 10px;
+}
+
+
+form button {
+    background-color: green;
+    border: solid 1px green;
+    padding: 6px 14px;
+    color: #fff;
+}

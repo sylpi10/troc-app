@@ -8,7 +8,6 @@
 	<div class="example-wrapper">
 		<h1>My account:
 			{{app.user}}</h1>
-		<hr>
 
 		<div class="account-action">
 			<div class="add-shop">
@@ -20,25 +19,37 @@
 					{{ form_widget(shopForm) }}
 					<button type="submit" class="btn">Add Shop</button>
 					{{ form_end(shopForm) }}
-				</div>
-			{% else %}
-				<h3>My Shop :
-					{{shop}}</h3>
-			{% endif %}
-
-
-			<div class="add-objects">
-				<h3>Add an object to my shop</h3>
-				{{ form_start(objectForm) }}
-				{{ form_widget(objectForm) }}
-				<button type="submit" class="btn">Add Object to Shop</button>
-				{{ form_end(objectForm) }}
+				{% else %}
+					<h3>My Shop :
+						{{shop}}</h3>
+				{% endif %}
 			</div>
 
-			<div class="objects">
-				{% for object in shop.objects %}
-					<h3>{{object.name}}</h3>
-				{% endfor %}
+
+			<div class="user-objects">
+				<div class="add-objects">
+					<h3>Add an object to my shop</h3>
+					{{ form_start(objectForm) }}
+					{{ form_widget(objectForm) }}
+					<button type="submit" class="btn btn-success">Add Object to Shop</button>
+					{{ form_end(objectForm) }}
+				</div>
+
+				<div class="objects-wrapper">
+					<h3>Objects in my shop:
+					</h3>
+					<div class="objects">
+						{% for object in shop.objects %}
+							<div class="object-card">
+								<h3>{{object.name}}</h3>
+								<h4 class="price">{{object.price}}
+									$</h4>
+								<p>{{object.description}}</p>
+							</div>
+						{% endfor %}
+					</div>
+
+				</div>
 			</div>
 		</div>
 	</div>

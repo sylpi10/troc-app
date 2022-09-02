@@ -2,6 +2,11 @@ header nav ul{
     display: flex;
     list-style-type:none;
     justify-content: space-around;
+    padding: 12px;
+    background-color: rgb(28, 28, 28);
+}
+header nav ul li a{
+    color: rgb(241, 168, 74);
 }
 
 .example-wrapper{

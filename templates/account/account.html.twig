@@ -52,30 +52,34 @@
 				</div>
 			</div>
 
-			<div class="user-relay user-entity-wrapper">
+			{% if is_granted("ROLE_RELAY") %}
 
-				<div class="user-relay form">
-					<h3>Add Relay Point</h3>
-					{{ form_start(relayForm) }}
-					{{ form_widget(relayForm) }}
-					<button type="submit" class="btn btn-success">Add Relay point</button>
-					{{ form_end(relayForm) }}
-				</div>
-				<div class="entity-wrapper">
-					<h3>My relay points</h3>
-					<div class="object-card">
-						<div class="entities">
-							{% for relay in relay %}
-								<div class="entity-card">
-									<h3>{{relay.name}}</h3>
+				<div class="user-relay user-entity-wrapper">
 
-									<p>{{relay.address}}</p>
-								</div>
-							{% endfor %}
+					<div class="user-relay form">
+						<h3>Add Relay Point</h3>
+						{{ form_start(relayForm) }}
+						{{ form_widget(relayForm) }}
+						<button type="submit" class="btn btn-success">Add Relay point</button>
+						{{ form_end(relayForm) }}
+					</div>
+					<div class="entity-wrapper">
+						<h3>My relay points</h3>
+						<div class="object-card">
+							<div class="entities">
+								{% for relay in relay %}
+									<div class="entity-card">
+										<h3>{{relay.name}}</h3>
+
+										<p>{{relay.address}}</p>
+									</div>
+								{% endfor %}
+							</div>
 						</div>
 					</div>
-				</div>
 
-			</div>
+				</div>
+			{% endif %}
+
 		</div>
 	{% endblock %}

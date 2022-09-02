@@ -137,6 +137,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->isVerified;
     }
 
+    public function getIsVerified()
+    {
+        return $this->isVerified;
+    }
+
     public function setIsVerified(bool $isVerified): self
     {
         $this->isVerified = $isVerified;

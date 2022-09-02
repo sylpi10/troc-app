@@ -27,10 +27,10 @@ header nav ul{
 .user-objects .price{
     color: #f44;
 }
-.user-entity-wrapper .entities{
+.entities{
     display: flex;
 }
-.user-entity-wrapper .entity-card{
+.user-objects .entity-card{
     box-shadow: 3px 3px 3px #ccc, -3px -3px 3px #ccc;
     padding: 14px;
     width: 40%;
